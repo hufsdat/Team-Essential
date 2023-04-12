@@ -1,7 +1,38 @@
 
-# R을 활용한 데이터 전처리와 간단한 확인 방법(View()함수 이용)
+# R을 활용한 데이터 전처리와, <<<굉장히 간단한>>> 확인 방법
 
-setwd('C:\\Users\\조강국\\Desktop\\DAT\\Datafile')
+>>> 7번
+
+# 데이터 소환
+setwd('경로')
+data <- read.csv('Iris.csv')
+
+
+# 데이터가 깔끔(Tidy)한지 확인
+head(data)
+summary(data)
+
+data %>% duplicated()  # 중복값(모든 열/변수에 대해 같은 값을 갖는 행) 확인하기.
+data %>% distinct()
+
+#
+par(mfrow=c(2,2))
+plot(data$SepalLengthCm)
+plot(data$SepalWidthCm)
+plot(data$PetalLengthCm)
+plot(data$PetalWidthCm)
+
+#
+par(mfrow=c(1,2))
+plot(data$SepalLengthCm~data$SepalWidthCm, main="Iris With Sepal", xlab = 'Width', ylab='Length', col='red')
+plot(data$PetalLengthCm~data$PetalWidthCm, main="Iris with Petal", xlab = 'Width', ylab='Length', col='blue')
+
+
+>>> 8번
+
+(View()함수 이용)
+
+setwd('경로')
 metro <- read.csv('seoulmetro.csv', fileEncoding = 'euc-kr')
 View(metro) <- R 창으로 엑셀 화면과 유사한 화면을 출력할 수 있음
 
@@ -56,6 +87,7 @@ plot(MST[,c(1)], type='o', lwd=2, col='black', xlab = '시간', ylab='혼잡도(
 plot(MST[,c(2)], type='o', lwd=2, col='blue', xlab = '시간', ylab='혼잡도(%)', main='서울역 상행선 토요일 혼잡도')
 plot(MST[,c(3)], type='o', lwd=2, col='red', xlab = '시간', ylab='혼잡도(%)', main='서울역 상행선 일요일 혼잡도')
 
+# plot : 기초적인 그래프 그리기 메소드
 # par(mfrow=c(k1,k2)) : k1 x k2 형태의 그래프 출력. 예컨대 (2,2)이라면 하나의 화면을 4개로 분할하여 총 4가지의 그래프 출력 가능 (4개 안 채워도 상관 없음)
 # type : 그래프의 형태
 # lwd : 실선의 굵기
