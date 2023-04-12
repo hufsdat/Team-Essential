@@ -25,7 +25,7 @@ library(tidyr)
 library(ggplot2)
 
 # 데이터 불러오기
-subway1 <- read.csv("subway_line7.csv")
+subway1 <- read.csv("subway_line1.csv")
 
 
 # 데이터를 long format으로 변환하기
@@ -49,7 +49,7 @@ ggplot(subway_long, aes(x = time, y = minutes)) +
 ```{r, error = T}
 
 # 데이터 불러오기
-subway2 <- read.csv("subway_line7.csv")
+subway2 <- read.csv("subway_line2.csv")
 
 # 데이터를 long format으로 변환하기
 subway_long <- subway2 %>% 
@@ -71,7 +71,7 @@ ggplot(subway_long, aes(x = time, y = minutes)) +
 
 ```{r, error = T}
 # 데이터 불러오기
-subway3 <- read.csv("subway_line7.csv")
+subway3 <- read.csv("subway_line3.csv")
 
 # 데이터를 long format으로 변환하기
 subway_long <- subway3 %>% 
@@ -94,7 +94,7 @@ ggplot(subway_long, aes(x = time, y = minutes)) +
 ```{r, error = T}
 
 # 데이터 불러오기
-subway4 <- read.csv("subway_line7.csv")
+subway4 <- read.csv("subway_line4.csv")
 
 # 데이터를 long format으로 변환하기
 subway_long <- subway4 %>% 
@@ -191,7 +191,7 @@ ggplot(subway_long, aes(x = time, y = minutes)) +
 ```{r, error = T}
 
 # 데이터 불러오기
-subway8 <- read.csv("subway_line7.csv")
+subway8 <- read.csv("subway_line8.csv")
 
 # 데이터를 long format으로 변환하기
 subway_long <- subway8 %>% 
