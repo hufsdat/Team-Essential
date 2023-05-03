@@ -16,7 +16,7 @@ print(Z)
 # 2
 import numpy as np
 
-a=np.random.random((3,3,3))
+a = np.random.random((3,3,3))
 print(a)
 
 # 3
